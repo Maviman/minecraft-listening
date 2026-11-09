@@ -1,0 +1,25 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+description = '''Brings back the old Minecraft soundtrack: only C418's music, played by the pre-1.16 rules (menu, survival, creative, Nether, End, underwater). Uses the music files already in the game; no audio is bundled. Client only.'''
+# Client-only: servers do not need it, and it can join servers that do not have it.
+displayTest = "IGNORE_ALL_VERSION"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "CLIENT"
